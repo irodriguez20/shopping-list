@@ -17,10 +17,10 @@ $(function () {
     });
     $('.shopping-item-toggle').click(event => {
         event.preventDefault();
-        $(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+        $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
     $('.shopping-item-delete').click(event => {
         event.preventDefault();
-        $(event.currentTarget).closest('li').remove();
+        $(this).closest('li').remove();
     })
 });
