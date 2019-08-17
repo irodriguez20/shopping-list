@@ -1,5 +1,6 @@
 $(function () {
-    $('#js-shopping-list-form').submit(() => {
+    $('#js-shopping-list-form').submit(event => {
+        event.preventDefault();
         const $itemName = $('input[name="shopping-list-entry"]').val();
         $('.shopping-list').append(
         `<li>
@@ -14,4 +15,9 @@ $(function () {
             </div>
         </li>`);
     });
+    $('.shopping-item-toggle').click(event => {
+        event.preventDefault();
+        
+    })
+
 });
