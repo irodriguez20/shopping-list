@@ -15,8 +15,12 @@ $(function () {
             </div>
         </li>`);
     });
-    $('.shopping-item-controls .shopping-item-toggle').click(event => {
+    $('.shopping-item-toggle').click(event => {
         event.preventDefault();
         $(event.currentTarget).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
     });
+    $('.shopping-item-delete').click(event => {
+        event.preventDefault();
+        $(event.currentTarget).closest('li').remove();
+    })
 });
